@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 
 import { GlobalContainer, VStack } from '@/components/ui';
 
+import { HeroSection } from '@app/components/sections';
+
 import styles from './main-page.module.scss';
 
 export const metadata: Metadata = {
@@ -18,11 +20,10 @@ export default function Home() {
     <main className={cn(styles.mainPage)}>
       <GlobalContainer asChild>
         <VStack
-          asChild
           spacing='1.6rem'
           className={cn('pt-[1.6rem]')}
         >
-          <div>Put sections here</div>
+          <HeroSection />
         </VStack>
       </GlobalContainer>
     </main>
