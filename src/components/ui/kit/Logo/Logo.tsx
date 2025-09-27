@@ -28,7 +28,7 @@ export const Logo: VariableFC<typeof Link, LogoProps, 'children' | 'href'> = ({
     >
       <Link
         href={href}
-        className={cn('text-[2.0rem]', className)}
+        className={cn('text-[2.0rem] !leading-[normal]', className)}
         style={{
           fontWeight: '800',
           ...style,

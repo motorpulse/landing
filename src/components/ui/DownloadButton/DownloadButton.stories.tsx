@@ -1,21 +1,25 @@
 import type { Meta } from '@storybook/react';
 
+import { HStack } from '@/components/ui';
 import { StoryBuilder } from '@/utils/storybook';
 
-import { Header } from './Header';
+import { DownloadButton } from './DownloadButton';
 
 const meta = {
-  title: 'UI / Header',
-  component: Header,
+  title: 'UI / DownloadButton',
+  component: DownloadButton,
   tags: ['autodoc'],
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Header>;
+  subcomponents: {
+    HStack,
+  },
+} satisfies Meta<typeof DownloadButton>;
 
 export default meta;
 
-const builder = new StoryBuilder<typeof Header>()
+const builder = new StoryBuilder<typeof DownloadButton>()
   .defineMeta(meta)
   .defineSharedProps({});
 

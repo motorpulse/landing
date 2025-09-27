@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import type { FC } from 'react';
 
+import { DownloadButton } from '@/components/ui';
 import { Logo } from '@/components/ui/kit';
 
 import styles from './Header.module.scss';
@@ -17,7 +18,9 @@ export const Header: FC<unknown> = () => {
 
       <article>Navbar</article>
 
-      <article>Right article</article>
+      <article>
+        <DownloadButton />
+      </article>
     </header>
   );
 };

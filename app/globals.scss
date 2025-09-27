@@ -8,5 +8,5 @@
 @include meta.load-css("../src/styles/nullstyles");
 
 body {
-  @apply bg-primary-bg text-primary-font;
+  @apply bg-primary-bg text-primary-font leading-[140%];
 }
