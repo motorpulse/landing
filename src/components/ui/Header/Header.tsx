@@ -26,7 +26,7 @@ export const Header: FC<unknown> = () => {
   return (
     <Glass
       asChild
-      className={cn('bg-secondary-bg-brutal')}
+      className={cn('bg-secondary-bg-brutal', 'z-20')}
       blur={10 * progress}
       style={{
         '--tw-bg-opacity': `${0.9 * progress}`,
