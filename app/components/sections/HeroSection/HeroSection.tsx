@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import type { FC } from 'react';
 
+import { SectionHeading } from '@app/components/components';
+
 import styles from './HeroSection.module.scss';
 
 // eslint-disable-next-line jsdoc/require-jsdoc
@@ -19,7 +21,12 @@ export const HeroSection: FC<unknown> = () => {
         '-mt-[8.8rem]',
       )}
     >
-      Hero section
+      <SectionHeading
+        main
+        title='Track your car history'
+        subtitle='MotorPulse is tracker app that allows you to track things like mileage, car repairs etc.'
+        className={cn('pt-[4.0rem]')}
+      />
     </section>
   );
 };
