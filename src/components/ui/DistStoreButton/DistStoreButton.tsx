@@ -26,6 +26,7 @@ export const DistStoreButton: VariableFC<
       asChild
     >
       <button
+        type='button'
         className={cn(
           distStoreButtonVariants({
             inverted,
