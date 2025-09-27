@@ -13,6 +13,10 @@ describe('Root layout test', () => {
     vi.mock('next/font/google', () => ({
       Inter: FONT_MOCK,
     }));
+
+    vi.mock('sf-pro/display', () => ({
+      SfProDisplay: FONT_MOCK,
+    }));
   });
 
   testNextPage(<RootLayout children={undefined} />, {

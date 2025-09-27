@@ -6,9 +6,12 @@ import { useScrollTreshhold } from '@/hooks';
 import {
   assertHookRendering,
   createUseScrollTreshholdTest,
+  injectMatchMediaMock,
 } from '@test/assets';
 
 describe('useScrollTreshhold', () => {
+  injectMatchMediaMock();
+
   afterEach(() => {
     cleanup();
   });
