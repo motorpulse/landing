@@ -1,9 +1,12 @@
 import cn from 'classnames';
+import Image from 'next/image';
 import type { FC } from 'react';
 
 import { AppStoreButton } from '@/components/ui';
 
 import { SectionHeading } from '@app/components/components';
+
+import heroImg from '@public/images/iOS Screens Hero.png';
 
 import styles from './HeroSection.module.scss';
 
@@ -17,8 +20,8 @@ export const HeroSection: FC<unknown> = () => {
         'rounded-[2.0rem]',
         'overflow-hidden',
         // TODO Return gradient
-        // 'border-top-border',
-        // styles.gradient,
+        'border-top-border',
+        styles.gradient,
         'pt-[8.8rem]',
         '-mt-[8.8rem]',
       )}
@@ -32,6 +35,24 @@ export const HeroSection: FC<unknown> = () => {
 
       <article className={cn('flex-center w-full pb-[5.0rem] pt-[3.2rem]')}>
         <AppStoreButton />
+      </article>
+
+      <article className={cn('flex-center w-full px-[3.2rem]')}>
+        <div
+          style={{
+            width: 'min(100%, 814px)',
+            aspectRatio: '814/374',
+          }}
+        >
+          <Image
+            src={heroImg}
+            alt='iOS Screenshots'
+            // 1,496×688
+            width={1496}
+            height={688}
+            className={cn('object-fill')}
+          />
+        </div>
       </article>
     </section>
   );
