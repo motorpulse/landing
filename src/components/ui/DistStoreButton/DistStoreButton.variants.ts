@@ -12,4 +12,7 @@ export const distStoreButtonVariants = cva('', {
       true: 'bg-primary-bg text-primary-font',
     },
   },
+  defaultVariants: {
+    inverted: false,
+  },
 });

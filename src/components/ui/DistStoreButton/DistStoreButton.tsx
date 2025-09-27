@@ -32,6 +32,7 @@ export const DistStoreButton: VariableFC<
           }),
           'py-[1.0rem] pl-[1.0rem] pr-[3.5rem]',
           'rounded-[1.0rem]',
+          'h-[6.0rem]',
           className,
         )}
         {...props}

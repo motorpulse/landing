@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import type { FC } from 'react';
 
+import { AppStoreButton } from '@/components/ui';
+
 import { SectionHeading } from '@app/components/components';
 
 import styles from './HeroSection.module.scss';
@@ -27,6 +29,10 @@ export const HeroSection: FC<unknown> = () => {
         subtitle='MotorPulse is tracker app that allows you to track things like mileage, car repairs etc.'
         className={cn('pt-[4.0rem]')}
       />
+
+      <article className={cn('flex-center w-full pb-[5.0rem] pt-[3.2rem]')}>
+        <AppStoreButton />
+      </article>
     </section>
   );
 };

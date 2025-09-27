@@ -6,11 +6,10 @@ import { DistStoreButton } from '@/components/ui';
 /**
  *
  */
-export const AppStoreButton: VariableFC<
-  typeof DistStoreButton,
-  unknown,
-  'topTitle' | 'title' | 'icon'
-> = ({ className, ...props }) => {
+export const AppStoreButton: VariableFC<'button', unknown, 'children'> = ({
+  className,
+  ...props
+}) => {
   return (
     <DistStoreButton
       topTitle='Download on the'
@@ -31,8 +30,7 @@ export const AppStoreButton: VariableFC<
           <defs>
             <clipPath id='clip0_2215_4234'>
               <rect
-                width='30'
-                height='30'
+                className={cn('size-[3.0rem]')}
                 fill='white'
               />
             </clipPath>
