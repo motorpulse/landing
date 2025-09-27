@@ -12,7 +12,9 @@ export const HeroSection: FC<unknown> = () => {
       className={cn(
         styles.hero,
         'border',
-        // 'border-top-border'
+        'rounded-[2.0rem]',
+        'overflow-hidden',
+        // 'border-top-border',
         // styles.gradient,
       )}
     >
