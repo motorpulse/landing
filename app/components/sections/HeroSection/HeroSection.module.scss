@@ -1,0 +1,11 @@
+section.hero {
+  &.gradient {
+    background-image: radial-gradient(circle at 0% 100%,
+      rgb(202 159 224 / 100%) 0%,
+      rgb(47 187 224 / 70%) 24%,
+      rgb(47 113 168 / 27%) 44%,
+      rgb(81 151 169 / 0%) 76%,
+      rgb(115 115 115 / 0%) 100%,
+    );
+  }
+}
