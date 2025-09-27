@@ -10,7 +10,12 @@ import styles from './Header.module.scss';
 export const Header: FC<unknown> = () => {
   return (
     <header
-      className={cn('items-center px-[3.2rem] py-[2.0rem]', styles.appHeader)}
+      className={cn(
+        'items-center px-[3.2rem] py-[2.0rem]',
+        'h-[8.8rem]',
+        'sticky left-[1.6rem] top-[1.6rem]',
+        styles.appHeader,
+      )}
     >
       <article>
         <Logo />

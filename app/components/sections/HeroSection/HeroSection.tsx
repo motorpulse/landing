@@ -1,8 +1,6 @@
 import cn from 'classnames';
 import type { FC } from 'react';
 
-import { Header } from '@/components/ui';
-
 import styles from './HeroSection.module.scss';
 
 // eslint-disable-next-line jsdoc/require-jsdoc
@@ -16,9 +14,11 @@ export const HeroSection: FC<unknown> = () => {
         'overflow-hidden',
         // 'border-top-border',
         // styles.gradient,
+        'pt-[8.8rem]',
+        '-mt-[8.8rem]',
       )}
     >
-      <Header />
+      Hero section
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import type { Metadata } from 'next';
 
-import { GlobalContainer, VStack } from '@/components/ui';
+import { GlobalContainer, Header, VStack } from '@/components/ui';
 
 import { HeroSection } from '@app/components/sections';
 
@@ -18,13 +18,24 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={cn(styles.mainPage)}>
-      <GlobalContainer asChild>
-        <VStack
-          spacing='1.6rem'
-          className={cn('pt-[1.6rem]')}
-        >
+      <GlobalContainer
+        asChild
+        className={cn('pt-[1.6rem]')}
+      >
+        <div>
+          <Header />
           <HeroSection />
-        </VStack>
+
+          <VStack
+            spacing='1.6rem'
+            className={cn('pt-[1.6rem]')}
+          >
+            {Array.from({ length: 50 }, () => (
+              // eslint-disable-next-line react/no-missing-key
+              <div>Content</div>
+            ))}
+          </VStack>
+        </div>
       </GlobalContainer>
     </main>
   );
