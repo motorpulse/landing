@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { SfProDisplay } from 'sf-pro/display';
 
 import { CoreLayout, Providers } from '@/components/layout';
 import { env } from '@/utils/env';
@@ -14,10 +14,6 @@ import {
 } from '@app/constants';
 
 import './globals.scss';
-
-const mainFont = Inter({
-  subsets: ['latin', 'cyrillic'],
-});
 
 /**
  * Generic application`s metadata generation.
@@ -83,7 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       dir='ltr'
       suppressHydrationWarning
     >
-      <body className={mainFont.className}>
+      <body className={SfProDisplay.className}>
         <Providers>
           <CoreLayout>{children}</CoreLayout>
         </Providers>
