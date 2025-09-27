@@ -12,6 +12,7 @@ export const HeroSection: FC<unknown> = () => {
         'border',
         'rounded-[2.0rem]',
         'overflow-hidden',
+        // TODO Return gradient
         // 'border-top-border',
         // styles.gradient,
         'pt-[8.8rem]',
