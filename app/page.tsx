@@ -29,12 +29,7 @@ export default function Home() {
           <VStack
             spacing='1.6rem'
             className={cn('pt-[1.6rem]')}
-          >
-            {Array.from({ length: 50 }, () => (
-              // eslint-disable-next-line react/no-missing-key
-              <div>Content</div>
-            ))}
-          </VStack>
+          ></VStack>
         </div>
       </GlobalContainer>
     </main>

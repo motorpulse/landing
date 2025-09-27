@@ -6,7 +6,7 @@ import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
 import { DownloadButton } from '@/components/ui';
-import { Logo } from '@/components/ui/kit';
+import { Glass, Logo } from '@/components/ui/kit';
 import { useScrollTreshhold } from '@/hooks';
 
 import styles from './Header.module.scss';
@@ -24,24 +24,33 @@ export const Header: FC<unknown> = () => {
   }, [scroll]);
 
   return (
-    <header
-      className={cn(
-        'items-center px-[3.2rem] py-[2.0rem]',
-        'h-[8.8rem]',
-        'sticky left-[1.6rem] top-[1.6rem]',
-        styles.appHeader,
-        'rounded-[2.0rem]',
-      )}
+    <Glass
+      asChild
+      className={cn('bg-secondary-bg-brutal')}
+      blur={10 * progress}
+      style={{
+        '--tw-bg-opacity': `${0.9 * progress}`,
+      }}
     >
-      <article>
-        <Logo />
-      </article>
+      <header
+        className={cn(
+          'items-center px-[3.2rem] py-[2.0rem]',
+          'h-[8.8rem]',
+          'sticky left-[1.6rem] top-[1.6rem]',
+          styles.appHeader,
+          'rounded-[2.0rem]',
+        )}
+      >
+        <article>
+          <Logo />
+        </article>
 
-      <article>Navbar</article>
+        <article>Navbar</article>
 
-      <article>
-        <DownloadButton />
-      </article>
-    </header>
+        <article>
+          <DownloadButton />
+        </article>
+      </header>
+    </Glass>
   );
 };
