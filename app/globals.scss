@@ -1,0 +1,12 @@
+@use "sass:meta";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@include meta.load-css("../src/styles/design-system");
+@include meta.load-css("../src/styles/nullstyles");
+
+body {
+  @apply bg-primary-bg text-primary-font;
+}
