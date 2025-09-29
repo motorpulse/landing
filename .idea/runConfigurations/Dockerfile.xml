@@ -2,7 +2,7 @@
   <configuration default="false" name="Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
     <deployment type="dockerfile">
       <settings>
-        <option name="containerName" value="next-template-container" />
+        <option name="containerName" value="motorpulse-landing" />
         <option name="portBindings">
           <list>
             <DockerPortBindingImpl>
