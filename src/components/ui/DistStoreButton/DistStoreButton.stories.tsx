@@ -31,10 +31,7 @@ export const Base = builder.buildStory({
    */
   render: ({ inverted, ...props }) => (
     <>
-      <AppStoreButton
-        {...props}
-        inverted={inverted}
-      />
+      <AppStoreButton {...props} />
     </>
   ),
 });
