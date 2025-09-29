@@ -18,6 +18,12 @@ const tailwindConfig: Config = {
       // Comment line below if design system is not needed
       ...DesignSystemConfig,
 
+      screens: {
+        sm: '769px',
+        md: '960px',
+        lg: '1440px',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-radial-in-left-bottom':
