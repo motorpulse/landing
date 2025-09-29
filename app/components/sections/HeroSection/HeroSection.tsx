@@ -24,6 +24,7 @@ export const HeroSection: FC<unknown> = () => {
         styles.gradient,
         'pt-[8.8rem]',
         '-mt-[8.8rem]',
+        'px-[3.2rem] max-sm:px-[1.6rem]',
       )}
     >
       <SectionHeading
@@ -37,7 +38,7 @@ export const HeroSection: FC<unknown> = () => {
         <AppStoreButton />
       </article>
 
-      <article className={cn('flex-center w-full px-[3.2rem]')}>
+      <article className={cn('flex-center w-full')}>
         <div
           style={{
             width: 'min(100%, 814px)',

@@ -20,13 +20,14 @@ export const DownloadButton: VariableFC<'button', unknown, 'children'> = ({
         type={type}
         className={cn(
           'px-[1.4285714286em] py-[0.8571428571em]',
+          'max-sm:!p-[0.8571428571em]',
           'rounded-full bg-primary-font text-primary-bg',
           'text-[1.4rem]',
           className,
         )}
         {...props}
       >
-        Download App
+        <span className={cn('max-sm:hidden')}>Download App</span>
         <div
           aria-hidden
           className={cn(

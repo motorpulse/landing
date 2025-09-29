@@ -25,7 +25,7 @@ export const SectionHeading: VariableFC<
     >
       <Container
         maxSize='50.0rem'
-        insets='3.2rem'
+        // insets='3.2rem'
         asChild
       >
         <header

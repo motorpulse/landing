@@ -35,17 +35,19 @@ export const Header: FC<unknown> = () => {
       <header
         className={cn(
           'items-center px-[3.2rem] py-[2.0rem]',
+          'max-sm:px-[1.6rem]',
           'h-[8.8rem]',
           'sticky left-[1.6rem] top-[1.6rem]',
           styles.appHeader,
           'rounded-[2.0rem]',
+          'max-sm:!grid-cols-2',
         )}
       >
         <article>
           <Logo />
         </article>
 
-        <article>Navbar</article>
+        <article className={cn('max-sm:!hidden')}>Navbar</article>
 
         <article>
           <DownloadButton />
