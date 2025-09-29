@@ -17,21 +17,19 @@ export const metadata: Metadata = {
  */
 export default function Home() {
   return (
-    <main className={cn(styles.mainPage)}>
-      <GlobalContainer
-        asChild
-        className={cn('pt-[1.6rem]')}
-      >
-        <div>
-          <Header />
-          <HeroSection />
+    <GlobalContainer
+      asChild
+      className={cn('pt-[1.6rem]')}
+    >
+      <main className={cn(styles.mainPage)}>
+        <Header />
+        <HeroSection />
 
-          <VStack
-            spacing='1.6rem'
-            className={cn('pt-[1.6rem]')}
-          ></VStack>
-        </div>
-      </GlobalContainer>
-    </main>
+        <VStack
+          spacing='1.6rem'
+          className={cn('pt-[1.6rem]')}
+        ></VStack>
+      </main>
+    </GlobalContainer>
   );
 }
