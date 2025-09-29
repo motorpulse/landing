@@ -52,6 +52,7 @@ export const HeroSection: FC<unknown> = () => {
             width={1496}
             height={688}
             className={cn('object-fill')}
+            priority
           />
         </div>
       </article>
