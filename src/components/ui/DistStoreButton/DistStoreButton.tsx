@@ -51,12 +51,12 @@ export const DistStoreButton: VariableFC<
           spacing='0.4rem'
           className={cn('items-start')}
         >
-          <p className={cn('text-[1.2rem] !leading-[normal] opacity-60')}>
+          <p className={cn('text-[1.2rem] !leading-[100%] opacity-60')}>
             {topTitle}
           </p>
 
           <p
-            className={cn('text-[2.4rem] font-medium !leading-[normal]')}
+            className={cn('text-[2.4rem] font-medium !leading-[100%]')}
             style={{
               letterSpacing: '2%',
             }}
