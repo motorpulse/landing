@@ -3,17 +3,20 @@ import type { VariantProps } from 'class-variance-authority';
 
 export type VStackVariantsType = VariantProps<typeof vStackVariants>;
 
+const VERTICAL_AXIS_BASE = 'justify';
+const HORIZONTAL_AXIS_BASE = 'items';
+
 export const vStackVariants = cva('', {
   variants: {
     alignment: {
       // Top
-      topLeading: 'justify-start items-start',
-      top: 'justify-start items-center',
-      topTrailing: 'justify-start items-end',
+      topLeading: '',
+      top: '',
+      topTrailing: '',
       // Center
-      leading: 'justify-center items-start',
-      center: 'justify-center items-center',
-      trailing: 'justify-center items-end',
+      leading: '',
+      center: '',
+      trailing: '',
       // Bottom
       bottomLeading: '',
       bottom: '',
@@ -24,32 +27,32 @@ export const vStackVariants = cva('', {
     {
       // Vertical Top
       alignment: ['topLeading', 'top', 'topLeading'],
-      className: 'justify-start',
+      className: `${VERTICAL_AXIS_BASE}-start`,
     },
     {
       // Vertical Center
       alignment: ['leading', 'center', 'trailing'],
-      className: 'justify-center',
+      className: `${VERTICAL_AXIS_BASE}-center`,
     },
     {
       // Vertical Bottom
       alignment: ['bottomLeading', 'bottom', 'bottomTrailing'],
-      className: 'justify-end',
+      className: `${VERTICAL_AXIS_BASE}-end`,
     },
     {
       // Horizontal Left
       alignment: ['topLeading', 'leading', 'bottomLeading'],
-      className: 'items-start',
+      className: `${HORIZONTAL_AXIS_BASE}-start`,
     },
     {
       // Horizontal Center
       alignment: ['top', 'center', 'bottom'],
-      className: 'items-center',
+      className: `${HORIZONTAL_AXIS_BASE}-center`,
     },
     {
       // Horizontal Right
       alignment: ['topTrailing', 'trailing', 'bottomTrailing'],
-      className: 'items-end',
+      className: `${HORIZONTAL_AXIS_BASE}-end`,
     },
   ],
   defaultVariants: {
