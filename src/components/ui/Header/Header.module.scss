@@ -3,19 +3,19 @@ header.appHeader {
   grid-template-columns: 1fr max-content 1fr;
   gap: 3.2rem;
 
-  article {
+  .cell {
     @apply flex items-center;
   }
 
-  article:first-child {
+  .cell:first-child {
     @apply justify-start;
   }
 
-  article:not(:first-child, :last-child) {
+  .cell:not(:first-child, :last-child) {
     @apply justify-center;
   }
 
-  article:last-child {
+  .cell:last-child {
     @apply justify-end;
   }
 }

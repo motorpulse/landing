@@ -43,13 +43,13 @@ export const Header: FC<unknown> = () => {
           'max-sm:!grid-cols-2',
         )}
       >
-        <article>
+        <article className={cn(styles.cell)}>
           <Logo />
         </article>
 
-        <article className={cn('max-sm:!hidden')}>Navbar</article>
+        <nav className={cn('max-sm:!hidden', styles.cell)}>Navbar</nav>
 
-        <article>
+        <article className={cn(styles.cell)}>
           <DownloadButton />
         </article>
       </header>
