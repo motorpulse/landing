@@ -1,9 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
+
+import { StoryBuilder } from '@/utils/storybook';
 
 import { NavbarItem } from './NavbarItem';
 
 const meta = {
-  title: 'UI Kit/Navbar item',
+  title: 'UI Kit / NavbarItem',
   component: NavbarItem,
   tags: ['autodoc'],
   parameters: {
@@ -13,16 +15,12 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+const builder = new StoryBuilder<typeof NavbarItem>()
+  .defineMeta(meta)
+  .defineSharedProps({
+    href: '/',
+    children: 'Home',
+    active: true,
+  });
 
-const sharedProps = {
-  href: '/',
-  children: 'Home',
-} satisfies Partial<Story['args']>;
-
-export const Default: Story = {
-  args: {
-    ...sharedProps,
-    parentPath: '/',
-  },
-};
+export const Base = builder.buildStory({});

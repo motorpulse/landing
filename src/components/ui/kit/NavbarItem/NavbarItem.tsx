@@ -4,6 +4,8 @@ import cn from 'classnames';
 import Link from 'next/link';
 import type { VariableFC } from 'xenopomp-essentials';
 
+import { HStack } from '@/components/ui';
+
 import type { NavbarItemProps } from './NavbarItem.props.ts';
 
 /**
@@ -12,15 +14,20 @@ import type { NavbarItemProps } from './NavbarItem.props.ts';
 export const NavbarItem: VariableFC<typeof Link, NavbarItemProps> = ({
   className,
   children,
+  active = false,
   ...props
 }) => {
   return (
-    <Link
-      className={cn(className)}
-      data-is-active={false}
-      {...props}
+    <HStack
+      asChild
+      className={cn('items-center')}
     >
-      {children}
-    </Link>
+      <Link
+        className={cn(className)}
+        {...props}
+      >
+        {children}
+      </Link>
+    </HStack>
   );
 };

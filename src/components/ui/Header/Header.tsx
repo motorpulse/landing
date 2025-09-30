@@ -5,7 +5,7 @@ import cn from 'classnames';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
-import { DownloadButton } from '@/components/ui';
+import { DownloadButton, HStack } from '@/components/ui';
 import { Glass, Logo } from '@/components/ui/kit';
 import { useScrollTreshhold } from '@/hooks';
 
@@ -47,7 +47,14 @@ export const Header: FC<unknown> = () => {
           <Logo />
         </article>
 
-        <nav className={cn('max-sm:!hidden', styles.cell)}>Navbar</nav>
+        <HStack
+          asChild
+          spacing='3.2rem'
+        >
+          <nav className={cn('max-sm:!hidden', styles.cell, 'items-center')}>
+            Navbar
+          </nav>
+        </HStack>
 
         <article className={cn(styles.cell)}>
           <DownloadButton />
