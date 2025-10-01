@@ -9,7 +9,7 @@ import { DownloadButton, HStack } from '@/components/ui';
 import { Glass, Logo, NavbarItem } from '@/components/ui/kit';
 import { useScrollTreshhold } from '@/hooks';
 
-import { HERO_SECTION_ID } from '@app/components/sections';
+import { FEATURES_SECTION_ID, HERO_SECTION_ID } from '@app/components/sections';
 
 import styles from './Header.module.scss';
 
@@ -59,6 +59,13 @@ export const Header: FC<unknown> = () => {
               itemId={HERO_SECTION_ID}
             >
               Home
+            </NavbarItem>
+
+            <NavbarItem
+              href={`/#${FEATURES_SECTION_ID}`}
+              itemId={FEATURES_SECTION_ID}
+            >
+              Features
             </NavbarItem>
           </nav>
         </HStack>

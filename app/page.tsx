@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import { GlobalContainer, Header, VStack } from '@/components/ui';
 
-import { HeroSection } from '@app/components/sections';
+import { FeaturesSection, HeroSection } from '@app/components/sections';
 
 import styles from './main-page.module.scss';
 
@@ -23,7 +23,9 @@ export default function Home() {
         <VStack
           spacing='1.6rem'
           className={cn('pt-[1.6rem]')}
-        ></VStack>
+        >
+          <FeaturesSection />
+        </VStack>
       </main>
     </GlobalContainer>
   );

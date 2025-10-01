@@ -18,7 +18,6 @@ export const HeroSection: FC<unknown> = () => {
     <ActiveSection
       itemId={HERO_SECTION_ID}
       id={HERO_SECTION_ID}
-      threshold={1}
       className={cn(
         styles.hero,
         'border',
