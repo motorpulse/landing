@@ -14,51 +14,19 @@ function createStackAlignment(
     variants: {
       alignment: {
         // Top
-        topLeading: '',
-        top: '',
-        topTrailing: '',
+        topLeading: `${verticalAxisBase}-start ${horizontalAxisBase}-start`,
+        top: `${verticalAxisBase}-start ${horizontalAxisBase}-center`,
+        topTrailing: `${horizontalAxisBase}-end`,
         // Center
-        leading: '',
-        center: '',
-        trailing: '',
+        leading: `${verticalAxisBase}-center ${horizontalAxisBase}-start`,
+        center: `${verticalAxisBase}-center ${horizontalAxisBase}-center`,
+        trailing: `${verticalAxisBase}-center ${horizontalAxisBase}-end`,
         // Bottom
-        bottomLeading: '',
-        bottom: '',
-        bottomTrailing: '',
+        bottomLeading: `${verticalAxisBase}-end ${horizontalAxisBase}-start`,
+        bottom: `${verticalAxisBase}-end ${horizontalAxisBase}-center`,
+        bottomTrailing: `${verticalAxisBase}-end ${horizontalAxisBase}-end`,
       },
     },
-    compoundVariants: [
-      {
-        // Vertical Top
-        alignment: ['topLeading', 'top', 'topLeading'],
-        className: `${verticalAxisBase}-start`,
-      },
-      {
-        // Vertical Center
-        alignment: ['leading', 'center', 'trailing'],
-        className: `${verticalAxisBase}-center`,
-      },
-      {
-        // Vertical Bottom
-        alignment: ['bottomLeading', 'bottom', 'bottomTrailing'],
-        className: `${verticalAxisBase}-end`,
-      },
-      {
-        // Horizontal Left
-        alignment: ['topLeading', 'leading', 'bottomLeading'],
-        className: `${horizontalAxisBase}-start`,
-      },
-      {
-        // Horizontal Center
-        alignment: ['top', 'center', 'bottom'],
-        className: `${horizontalAxisBase}-center`,
-      },
-      {
-        // Horizontal Right
-        alignment: ['topTrailing', 'trailing', 'bottomTrailing'],
-        className: `${horizontalAxisBase}-end`,
-      },
-    ],
     defaultVariants: {
       alignment: undefined,
     },
