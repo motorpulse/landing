@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { ZStack } from '@/components/ui';
 
 const meta = {
-  title: 'UI / ZStack',
+  title: 'UI / Stacks / ZStack',
   component: ZStack,
   tags: ['autodoc'],
   parameters: {

@@ -6,7 +6,7 @@ import { StoryBuilder } from '@/utils/storybook';
 import { VStack } from './VStack';
 
 const meta = {
-  title: 'UI / VStack',
+  title: 'UI / Stacks / VStack',
   component: VStack,
   tags: ['autodoc'],
   parameters: {
