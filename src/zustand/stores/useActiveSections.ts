@@ -66,9 +66,11 @@ export const useActiveSections = create<IActiveSections>((set, get) => ({
    */
   isLast(itemId) {
     const { intersections } = get();
-    const lastItem = intersections.at(-1);
+    const sortedIntersections = intersections.sort((a, b) => a.id - b.id);
 
-    if (!intersections.length) return false;
+    if (!sortedIntersections.length) return false;
+
+    const lastItem = sortedIntersections.at(-1);
     if (!lastItem) return false;
 
     // Last item id should be the same as argument one.
