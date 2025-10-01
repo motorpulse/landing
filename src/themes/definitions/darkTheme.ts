@@ -24,12 +24,13 @@ export const darkTheme = {
       'font-shallow': '#979797',
     },
     secondary: {
+      'bg-main': '#202020',
+      'bg-brutal': '#1B1B1B',
+      'bg-post': '#282727',
       bg: {
         hover: '#1D1B1B',
         active: '#474545',
       },
-      'bg-brutal': '#1B1B1B',
-      'bg-post': '#282727',
     },
     col: {
       sel: '#FFFFFF',

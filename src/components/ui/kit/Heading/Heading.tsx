@@ -9,12 +9,13 @@ import type { HeadingProps, HeadingType } from './Heading.props';
  */
 export const Heading: VariableFC<'h1', HeadingProps> = ({
   level,
+  exactLevel,
   className,
   children,
   style,
   ...props
 }) => {
-  const Comp = `h${level}` as HeadingType;
+  const Comp = `h${exactLevel ?? level}` as HeadingType;
 
   const levelMap: Record<typeof level, string> = {
     1: '3.2rem',

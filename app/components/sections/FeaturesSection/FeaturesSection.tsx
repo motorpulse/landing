@@ -21,6 +21,7 @@ export const FeaturesSection: FC<unknown> = () => {
       <SectionHeading
         title='Everything you need. Nothing You Don`t'
         subtitle='Comprehensive car history management with simplicity.'
+        className={cn('pb-[4.0rem]')}
       />
     </ActiveSection>
   );
