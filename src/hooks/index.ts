@@ -9,3 +9,4 @@ export { useCopyToClipboard };
 export * from './use-tracked-state';
 export * from './use-effect-after-mount';
 export * from './use-scroll-treshhold';
+export * from './use-intersection';
