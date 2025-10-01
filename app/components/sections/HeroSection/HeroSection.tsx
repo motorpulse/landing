@@ -30,6 +30,9 @@ export const HeroSection: FC<unknown> = () => {
         '-mt-[8.8rem]',
         'px-[3.2rem] max-sm:px-[1.6rem]',
       )}
+      style={{
+        scrollMarginTop: '1.6rem',
+      }}
     >
       <SectionHeading
         main
