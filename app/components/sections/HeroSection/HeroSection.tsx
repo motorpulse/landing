@@ -2,7 +2,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import { AppStoreButton } from '@/components/ui';
+import { ActiveSection, AppStoreButton } from '@/components/ui';
 
 import { SectionHeading } from '@app/components/components';
 
@@ -10,10 +10,15 @@ import heroImg from '@public/images/iOS Screens Hero.png';
 
 import styles from './HeroSection.module.scss';
 
+export const HERO_SECTION_ID = 'hero-section';
+
 // eslint-disable-next-line jsdoc/require-jsdoc
 export const HeroSection: FC<unknown> = () => {
   return (
-    <section
+    <ActiveSection
+      itemId={HERO_SECTION_ID}
+      id={HERO_SECTION_ID}
+      threshold={1}
       className={cn(
         styles.hero,
         'border',
@@ -55,6 +60,6 @@ export const HeroSection: FC<unknown> = () => {
           />
         </div>
       </article>
-    </section>
+    </ActiveSection>
   );
 };

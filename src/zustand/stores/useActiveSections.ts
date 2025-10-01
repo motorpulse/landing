@@ -1,3 +1,5 @@
+'use client';
+
 import { max } from '@floating-ui/utils';
 import { create } from 'zustand';
 

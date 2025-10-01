@@ -32,7 +32,7 @@ export const ActiveSection = slotable<
       threshold,
     });
     const itemId = useUniqueId(t => `active-section-${customItemId ?? t}`);
-    const { append, remove, isLast } = useActiveSections();
+    const { append, remove } = useActiveSections();
 
     useEffect(() => {
       if (intersection?.isIntersecting) {
@@ -40,6 +40,7 @@ export const ActiveSection = slotable<
         return;
       }
       remove(itemId);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [intersection?.isIntersecting]);
 
     return (

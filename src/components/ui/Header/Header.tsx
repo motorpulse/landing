@@ -6,8 +6,10 @@ import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
 import { DownloadButton, HStack } from '@/components/ui';
-import { Glass, Logo } from '@/components/ui/kit';
+import { Glass, Logo, NavbarItem } from '@/components/ui/kit';
 import { useScrollTreshhold } from '@/hooks';
+
+import { HERO_SECTION_ID } from '@app/components/sections';
 
 import styles from './Header.module.scss';
 
@@ -52,7 +54,12 @@ export const Header: FC<unknown> = () => {
           spacing='3.2rem'
         >
           <nav className={cn('max-sm:!hidden', styles.cell, 'items-center')}>
-            Navbar
+            <NavbarItem
+              href={`/#${HERO_SECTION_ID}`}
+              itemId={HERO_SECTION_ID}
+            >
+              Home
+            </NavbarItem>
           </nav>
         </HStack>
 

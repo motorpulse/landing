@@ -1,3 +1,1 @@
-export interface NavbarItemProps {
-  active?: boolean;
-}
+export interface NavbarItemProps {}

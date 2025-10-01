@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react';
 
+import { ActiveSection, HStack } from '@/components/ui';
 import { StoryBuilder } from '@/utils/storybook';
 
 import { NavbarItem } from './NavbarItem';
@@ -11,6 +12,9 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  subcomponents: {
+    HStack,
+  },
 } satisfies Meta<typeof NavbarItem>;
 
 export default meta;
@@ -20,7 +24,16 @@ const builder = new StoryBuilder<typeof NavbarItem>()
   .defineSharedProps({
     href: '/',
     children: 'Home',
-    active: true,
+    itemId: 'main',
   });
 
-export const Base = builder.buildStory({});
+export const Base = builder.buildStory({
+  /**
+   *
+   */
+  render: args => (
+    <ActiveSection itemId='main'>
+      <NavbarItem {...args} />
+    </ActiveSection>
+  ),
+});
