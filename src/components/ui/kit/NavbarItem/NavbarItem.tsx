@@ -41,7 +41,7 @@ export const NavbarItem: VariableFC<typeof Link, NavbarItemProps & ItemId> = ({
             'size-[0.6rem] rounded-full bg-accent-color',
             'transition-opacity',
             {
-              'opacity-0': !isLast(itemId),
+              'opacity-0': !isLast(`active-section-${itemId}`),
             },
           )}
         ></div>
