@@ -12,3 +12,4 @@ export * from './DownloadButton/DownloadButton';
 export * from './DistStoreButton/DistStoreButton';
 export * from './DistStoreButton/AppStoreButton';
 export * from './ActiveSection/ActiveSection';
+export * from './Footer/Footer';

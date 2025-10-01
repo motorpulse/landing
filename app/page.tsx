@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { GlobalContainer, Header, VStack } from '@/components/ui';
+import { Footer, GlobalContainer, Header, VStack } from '@/components/ui';
 
 import { FeaturesSection, HeroSection } from '@app/components/sections';
 
@@ -22,10 +22,12 @@ export default function Home() {
 
         <VStack
           spacing='1.6rem'
-          className={cn('pt-[1.6rem]')}
+          className={cn('py-[1.6rem]')}
         >
           <FeaturesSection />
         </VStack>
+
+        <Footer />
       </main>
     </GlobalContainer>
   );
