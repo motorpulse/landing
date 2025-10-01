@@ -75,10 +75,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      lang='ru'
+      lang='en'
       dir='ltr'
       suppressHydrationWarning
     >
+      <head>
+        <meta
+          name='apple-itunes-app'
+          content='app-id=6749870612'
+        />
+      </head>
+
       <body className={SfProDisplay.className}>
         <Providers>
           <CoreLayout>{children}</CoreLayout>
