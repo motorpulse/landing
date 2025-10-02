@@ -24,7 +24,7 @@ export const ActiveSection = slotable<
     Comp,
     className,
     children,
-    threshold = 1,
+    threshold = 0.5,
     itemId: customItemId,
     ...props
   }) => {
