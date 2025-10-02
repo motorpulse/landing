@@ -1,19 +1,29 @@
 import cn from 'classnames';
 import Link from 'next/link';
+import type { ComponentProps } from 'react';
 import type { VariableFC } from 'xenopomp-essentials';
 
 import { DistStoreButton } from '@/components/ui';
 
+type DistStoreButtonProps = Pick<
+  ComponentProps<typeof DistStoreButton>,
+  'inverted'
+>;
+
+export const APP_STORE_PAGE_LINK =
+  'https://apps.apple.com/ru/app/motorpulse/id6749870612';
+
 /**
  *
  */
-export const AppStoreButton: VariableFC<'button', unknown, 'children'> = ({
-  className,
-  ...props
-}) => {
+export const AppStoreButton: VariableFC<
+  'button',
+  {} & DistStoreButtonProps,
+  'children'
+> = ({ className, ...props }) => {
   return (
     <Link
-      href='https://apps.apple.com/ru/app/motorpulse/id6749870612'
+      href={APP_STORE_PAGE_LINK}
       target='_blank'
     >
       <DistStoreButton

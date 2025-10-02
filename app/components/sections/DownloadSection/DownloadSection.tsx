@@ -1,7 +1,13 @@
 import cn from 'classnames';
+import { QRCodeSVG } from 'qrcode.react';
 import type { FC } from 'react';
 
-import { ActiveSection, VStack } from '@/components/ui';
+import {
+  APP_STORE_PAGE_LINK,
+  ActiveSection,
+  AppStoreButton,
+  VStack,
+} from '@/components/ui';
 
 import { SectionHeading } from '@app/components/components';
 
@@ -30,6 +36,19 @@ export const DownloadSection: FC<unknown> = () => {
             className: cn('!text-primary-font'),
           }}
         />
+
+        <div className={cn('rounded-[0.8rem] bg-white p-[0.8rem]')}>
+          <QRCodeSVG
+            value={APP_STORE_PAGE_LINK}
+            size={100}
+            className={cn(
+              '[&>path:first-of-type]:fill-white [&>path:last-of-type]:fill-black',
+            )}
+            aria-label='QR-code for downloading mobile version of MotorPulse.'
+          />
+        </div>
+
+        <AppStoreButton inverted />
       </ActiveSection>
     </VStack>
   );
