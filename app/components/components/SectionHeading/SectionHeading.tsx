@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import type { VariableFC } from 'xenopomp-essentials';
+import type { FCProps, VariableFC } from 'xenopomp-essentials';
 
 import { Container, VStack } from '@/components/ui';
 import { Heading } from '@/components/ui/kit';
@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   main?: boolean;
   title: string;
   subtitle: string;
+  subtitleProps?: FCProps<VariableFC<'p', unknown, 'children'>>;
 }
 
 /**
@@ -17,7 +18,7 @@ export const SectionHeading: VariableFC<
   'header',
   SectionHeadingProps,
   'children'
-> = ({ main = false, title, subtitle, className, ...props }) => {
+> = ({ main = false, title, subtitle, className, subtitleProps, ...props }) => {
   return (
     <VStack
       asChild
@@ -39,7 +40,14 @@ export const SectionHeading: VariableFC<
             {title}
           </Heading>
 
-          <p className={cn('text-[1.6rem]', 'text-primary-font-shallow')}>
+          <p
+            {...subtitleProps}
+            className={cn(
+              'text-[1.6rem]',
+              'text-primary-font-shallow',
+              subtitleProps?.className,
+            )}
+          >
             {subtitle}
           </p>
         </header>

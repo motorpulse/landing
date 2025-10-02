@@ -2,7 +2,11 @@ import cn from 'classnames';
 
 import { Footer, GlobalContainer, Header, VStack } from '@/components/ui';
 
-import { FeaturesSection, HeroSection } from '@app/components/sections';
+import {
+  DownloadSection,
+  FeaturesSection,
+  HeroSection,
+} from '@app/components/sections';
 
 import styles from './main-page.module.scss';
 
@@ -25,6 +29,7 @@ export default function Home() {
           className={cn('py-[1.6rem]')}
         >
           <FeaturesSection />
+          <DownloadSection />
         </VStack>
 
         <Footer />
