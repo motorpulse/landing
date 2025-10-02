@@ -3,9 +3,21 @@ import { afterEach, describe, expect, test } from 'vitest';
 
 import { useIntersection } from '@/hooks';
 
-import { assertHookRendering, createUseIntersectionTest } from '@test/assets';
+import {
+  assertHookRendering,
+  createUseIntersectionTest,
+  injectMatchMediaMock,
+  injectMocks,
+  mockIntersectionObserver,
+} from '@test/assets';
 
 describe('useIntersection', () => {
+  injectMatchMediaMock();
+
+  injectMocks(() => {
+    mockIntersectionObserver();
+  });
+
   afterEach(() => {
     cleanup();
   });
