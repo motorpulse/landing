@@ -28,6 +28,9 @@ export const DownloadSection: FC<unknown> = () => {
           'px-[3.2rem] py-[5.0rem] max-sm:px-[1.6rem]',
           'rounded-[2.0rem] bg-accent-color',
         )}
+        style={{
+          scrollMarginTop: 'calc(8.8rem + 1.6rem * 2)',
+        }}
       >
         <SectionHeading
           title='Download MotorPulse for free'
