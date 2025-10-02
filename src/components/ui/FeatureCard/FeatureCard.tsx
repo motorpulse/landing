@@ -22,7 +22,11 @@ export const FeatureCard: FC<FeatureCardProps> = ({
       asChild
       alignment='topLeading'
       spacing='2.4rem'
-      className={cn('rounded-[1.6rem] p-[2.4rem]', 'bg-secondary-bg-main')}
+      className={cn(
+        'rounded-[1.6rem] p-[2.4rem]',
+        'bg-secondary-bg-main',
+        'w-full',
+      )}
     >
       <article>
         <VStack
