@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
-import cn from 'classnames';
 
+import { StackAlignmentPreview } from '@/components/ui/VStack/Preview.tsx';
 import { StoryBuilder } from '@/utils/storybook';
 
 import { VStack } from './VStack';
@@ -29,28 +29,6 @@ const builder = new StoryBuilder<typeof VStack>()
 
 export const Base = builder.buildStory({});
 export const Alignment = builder.buildStory({
-  args: {
-    style: {
-      height: '300px',
-      width: '300px',
-    },
-    className: cn('bg-red-500/25'),
-    alignment: 'topLeading',
-  },
-  argTypes: {
-    alignment: {
-      control: { type: 'select' },
-      options: [
-        'topLeading',
-        'top',
-        'topTrailing',
-        'leading',
-        'center',
-        'trailing',
-        'bottomLeading',
-        'bottom',
-        'bottomTrailing',
-      ],
-    },
-  },
+  // eslint-disable-next-line jsdoc/require-jsdoc
+  render: () => <StackAlignmentPreview stackType='vstack' />,
 });
